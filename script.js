@@ -13,6 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalDescription = document.getElementById('modal-description');
     const modalCta = document.getElementById('modal-cta');
 
+    // ========== FONCTION POUR DÉTECTER SI ON EST SUR MOBILE ==========
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
     // ========== FONCTION POUR OUVRIR LE MODAL ==========
     function openModal(formationId) {
         const formation = formations[formationId];
@@ -31,11 +36,39 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // ========== GESTION DES CLICS SUR LES ZONES (Desktop) ==========
+    // ========== FONCTION POUR SCROLLER VERS UNE CARTE MOBILE ==========
+    function scrollToMobileCard(formationId) {
+        const targetCard = document.querySelector(`.formation-card[data-formation="${formationId}"]`);
+
+        if (targetCard) {
+            // Retirer la surbrillance des autres cartes
+            mobileCards.forEach(card => card.classList.remove('highlight'));
+
+            // Scroller vers la carte
+            targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Ajouter la surbrillance
+            targetCard.classList.add('highlight');
+
+            // Retirer la surbrillance après 2 secondes
+            setTimeout(() => {
+                targetCard.classList.remove('highlight');
+            }, 2000);
+        }
+    }
+
+    // ========== GESTION DES CLICS SUR LES ZONES (Desktop + Mobile) ==========
     zones.forEach(zone => {
         zone.addEventListener('click', function() {
             const formationId = this.dataset.formation;
-            openModal(formationId);
+
+            if (isMobile()) {
+                // Sur mobile : scroller vers la carte correspondante
+                scrollToMobileCard(formationId);
+            } else {
+                // Sur desktop : ouvrir le modal
+                openModal(formationId);
+            }
         });
     });
 

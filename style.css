@@ -137,6 +137,21 @@ body {
     transform: scale(0.98);
 }
 
+/* Surbrillance quand on clique sur le schéma en mobile */
+.formation-card.highlight {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    animation: pulse 0.5s ease-in-out 3;
+}
+
+.formation-card.highlight .card-name {
+    color: white;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+}
+
 .card-icon {
     font-size: 20px;
 }
@@ -271,9 +286,9 @@ body {
         touch-action: pan-x pan-y pinch-zoom; /* Permet le zoom au pinch */
     }
 
-    /* Cacher les zones cliquables sur mobile (trop petites) */
+    /* Zones cliquables sur mobile - gardées visibles pour navigation */
     .zone {
-        display: none;
+        display: block;
     }
 
     /* Afficher la liste mobile */
