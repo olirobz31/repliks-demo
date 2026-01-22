@@ -10,7 +10,7 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 20px;
 }
@@ -63,6 +63,87 @@ body {
 /* Au clic : effet de pression */
 .zone:active {
     transform: scale(0.98);
+}
+
+/* ========== LISTE MOBILE ========== */
+.mobile-list {
+    display: none; /* Caché par défaut (desktop) */
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.mobile-hint {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.category-section {
+    margin-bottom: 15px;
+}
+
+.category-title {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 0;
+}
+
+.category-animation { background: #e91e63; }
+.category-commercial { background: #ff9800; }
+.category-leads { background: #2196f3; }
+.category-commandes { background: #2196f3; }
+.category-softskills { background: #9c27b0; }
+.category-management { background: #4caf50; }
+
+.formation-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    background: white;
+    padding: 12px;
+    border-radius: 0 0 10px 10px;
+}
+
+.formation-card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    font-size: 14px;
+    flex: 1 1 calc(50% - 4px);
+    min-width: 140px;
+}
+
+.formation-card:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.formation-card:active {
+    transform: scale(0.98);
+}
+
+.card-icon {
+    font-size: 20px;
+}
+
+.card-name {
+    font-weight: 500;
+    color: #333;
+    text-align: left;
 }
 
 /* ========== MODAL POPUP ========== */
@@ -175,11 +256,33 @@ body {
     box-shadow: 0 6px 20px rgba(245, 87, 108, 0.6);
 }
 
-/* ========== RESPONSIVE ========== */
+/* ========== RESPONSIVE MOBILE ========== */
 @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    /* Schéma plus petit mais VISIBLE */
+    .schema-container {
+        border-radius: 15px;
+        touch-action: pan-x pan-y pinch-zoom; /* Permet le zoom au pinch */
+    }
+
+    /* Cacher les zones cliquables sur mobile (trop petites) */
+    .zone {
+        display: none;
+    }
+
+    /* Afficher la liste mobile */
+    .mobile-list {
+        display: block;
+    }
+
+    /* Modal adapté mobile */
     .modal-content {
         padding: 30px 20px;
         margin: 10% auto;
+        width: 95%;
     }
     
     #modal-title {
@@ -192,5 +295,22 @@ body {
     
     .modal-icon {
         font-size: 48px;
+    }
+
+    .modal-cta {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    /* Cards en colonne sur très petit écran */
+    .formation-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* Tablette : garder le schéma cliquable */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .schema-container {
+        max-width: 100%;
     }
 }

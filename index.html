@@ -7,18 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- SCHÉMA INTERACTIF (Desktop + Mobile en lecture seule) -->
     <div class="schema-container">
         <img src="schema-repliks.png" alt="Schéma Repliks" class="schema-image">
         
-        <!-- ZONES CLIQUABLES -->
+        <!-- ZONES CLIQUABLES (Desktop uniquement) -->
         <div class="zone" data-formation="exit" style="top: 3.5%; left: 4.6%; width: 8.1%; height: 7.9%;"></div>
         <div class="zone" data-formation="boost" style="top: 38.2%; left: 33.0%; width: 10.6%; height: 10.9%;"></div>
-        <div class="zone" data-formation="bingo" style="top: 55.1%; left: 31.7%; width: 11.6%; height: 7.6%;"></div>
-        <div class="zone" data-formation="smile" style="top: 70.2%; left: 33.3%; width: 9.0%; height: 7.6%;"></div>
+        <div class="zone" data-formation="bingo" style="top: 55.1%; left: 31.7%; width: 12.0%; height: 8.2%;"></div>
+        <div class="zone" data-formation="smile" style="top: 70.2%; left: 33.3%; width: 9.0%; height: 8.0%;"></div>
         <div class="zone zone-circle" data-formation="dring" style="top: 54.0%; left: 15.8%; width: 10.1%; height: 13.7%;"></div>
         <div class="zone zone-circle" data-formation="echo" style="top: 66.7%; left: 10.1%; width: 10.3%; height: 14.0%;"></div>
         <div class="zone zone-circle" data-formation="ippon" style="top: 74.5%; left: 21.2%; width: 9.5%; height: 13.0%;"></div>
-        <div class="zone zone-circle" data-formation="punch" style="top: 84.4%; left: 12.5%; width: 10.6%; height: 13.4%;"></div>
+        <div class="zone zone-circle" data-formation="punch" style="top: 84.4%; left: 12.5%; width: 10.7%; height: 13.5%;"></div>
         <div class="zone" data-formation="star" style="top: 53.4%; left: 54.7%; width: 12.9%; height: 6.9%;"></div>
         <div class="zone" data-formation="pitch" style="top: 60.5%; left: 54.5%; width: 9.5%; height: 6.9%;"></div>
         <div class="zone" data-formation="tictac" style="top: 67.6%; left: 57.9%; width: 12.3%; height: 6.2%;"></div>
@@ -26,13 +27,148 @@
         <div class="zone" data-formation="zen" style="top: 77.5%; left: 60.7%; width: 8.9%; height: 7.0%;"></div>
         <div class="zone" data-formation="swing" style="top: 83.0%; left: 53.7%; width: 7.9%; height: 5.7%;"></div>
         <div class="zone" data-formation="cap" style="top: 87.9%; left: 55.7%; width: 16.9%; height: 5.5%;"></div>
-        <div class="zone" data-formation="youpi" style="top: 40.5%; left: 69.0%; width: 12.8%; height: 9.9%; transform: rotate(-10deg);"></div>
-        <div class="zone" data-formation="disco" style="top: 52.5%; left: 69.5%; width: 12.7%; height: 9.3%; transform: rotate(-9deg);"></div>
-        <div class="zone" data-formation="bim" style="top: 63.2%; left: 71.1%; width: 12.7%; height: 9.2%; transform: rotate(-10deg);"></div>
-        <div class="zone" data-formation="maouss" style="top: 75.7%; left: 70.5%; width: 12.4%; height: 9.5%; transform: rotate(-9deg);"></div>
-        <div class="zone" data-formation="boss" style="top: 79.6%; left: 84.0%; width: 11.9%; height: 8.7%; transform: rotate(-10deg);"></div>
-        <div class="zone" data-formation="twist" style="top: 86.7%; left: 72.3%; width: 11.5%; height: 8.8%; transform: rotate(-11deg);"></div>
-        <div class="zone" data-formation="lady" style="top: 87.8%; left: 85.1%; width: 12.1%; height: 8.7%; transform: rotate(-9deg);"></div>
+        <div class="zone" data-formation="youpi" style="top: 40.5%; left: 69.0%; width: 12.7%; height: 10.0%; transform: rotate(-10deg);"></div>
+        <div class="zone" data-formation="disco" style="top: 52.6%; left: 69.7%; width: 12.3%; height: 9.2%; transform: rotate(-10deg);"></div>
+        <div class="zone" data-formation="bim" style="top: 62.9%; left: 71.3%; width: 12.3%; height: 9.5%; transform: rotate(-10deg);"></div>
+        <div class="zone" data-formation="maouss" style="top: 76.0%; left: 70.7%; width: 12.4%; height: 9.1%; transform: rotate(-10deg);"></div>
+        <div class="zone" data-formation="boss" style="top: 79.7%; left: 84.3%; width: 11.4%; height: 8.4%; transform: rotate(-10deg);"></div>
+        <div class="zone" data-formation="twist" style="top: 86.7%; left: 72.3%; width: 11.8%; height: 8.9%; transform: rotate(-10deg);"></div>
+        <div class="zone" data-formation="lady" style="top: 87.5%; left: 85.4%; width: 11.5%; height: 8.8%; transform: rotate(-10deg);"></div>
+    </div>
+
+    <!-- LISTE MOBILE (visible uniquement sur mobile) -->
+    <div class="mobile-list">
+        <p class="mobile-hint">👆 Pincez le schéma pour zoomer • Choisissez une formation ci-dessous</p>
+        
+        <!-- Animation -->
+        <div class="category-section">
+            <h3 class="category-title category-animation">🎪 Animation</h3>
+            <div class="formation-cards">
+                <button class="formation-card" data-formation="exit">
+                    <span class="card-icon">🎪</span>
+                    <span class="card-name">Séminaires & Team Building</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Commercial -->
+        <div class="category-section">
+            <h3 class="category-title category-commercial">💼 Formation Commerciale</h3>
+            <div class="formation-cards">
+                <button class="formation-card" data-formation="boost">
+                    <span class="card-icon">🚀</span>
+                    <span class="card-name">BOOST</span>
+                </button>
+                <button class="formation-card" data-formation="bingo">
+                    <span class="card-icon">🎯</span>
+                    <span class="card-name">BINGO</span>
+                </button>
+                <button class="formation-card" data-formation="smile">
+                    <span class="card-icon">😊</span>
+                    <span class="card-name">SMILE</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Parcours Leads -->
+        <div class="category-section">
+            <h3 class="category-title category-leads">📞 Parcours Leads</h3>
+            <div class="formation-cards">
+                <button class="formation-card" data-formation="dring">
+                    <span class="card-icon">📞</span>
+                    <span class="card-name">DRING</span>
+                </button>
+                <button class="formation-card" data-formation="echo">
+                    <span class="card-icon">📣</span>
+                    <span class="card-name">ECHO</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Parcours Commandes -->
+        <div class="category-section">
+            <h3 class="category-title category-commandes">🥋 Parcours Commandes</h3>
+            <div class="formation-cards">
+                <button class="formation-card" data-formation="ippon">
+                    <span class="card-icon">🥋</span>
+                    <span class="card-name">IPPON</span>
+                </button>
+                <button class="formation-card" data-formation="punch">
+                    <span class="card-icon">🥊</span>
+                    <span class="card-name">PUNCH</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="category-section">
+            <h3 class="category-title category-softskills">🧠 Soft Skills</h3>
+            <div class="formation-cards">
+                <button class="formation-card" data-formation="star">
+                    <span class="card-icon">⭐</span>
+                    <span class="card-name">STAR</span>
+                </button>
+                <button class="formation-card" data-formation="pitch">
+                    <span class="card-icon">🎤</span>
+                    <span class="card-name">PITCH</span>
+                </button>
+                <button class="formation-card" data-formation="tictac">
+                    <span class="card-icon">⏰</span>
+                    <span class="card-name">TIC TAC</span>
+                </button>
+                <button class="formation-card" data-formation="pschitt">
+                    <span class="card-icon">💨</span>
+                    <span class="card-name">PSCHITT</span>
+                </button>
+                <button class="formation-card" data-formation="zen">
+                    <span class="card-icon">🧘</span>
+                    <span class="card-name">ZEN</span>
+                </button>
+                <button class="formation-card" data-formation="swing">
+                    <span class="card-icon">🔄</span>
+                    <span class="card-name">SWING</span>
+                </button>
+                <button class="formation-card" data-formation="cap">
+                    <span class="card-icon">🧭</span>
+                    <span class="card-name">CAP</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Management -->
+        <div class="category-section">
+            <h3 class="category-title category-management">👔 Management</h3>
+            <div class="formation-cards">
+                <button class="formation-card" data-formation="youpi">
+                    <span class="card-icon">🎉</span>
+                    <span class="card-name">YOUPI</span>
+                </button>
+                <button class="formation-card" data-formation="disco">
+                    <span class="card-icon">🎨</span>
+                    <span class="card-name">DISC'O</span>
+                </button>
+                <button class="formation-card" data-formation="bim">
+                    <span class="card-icon">🎭</span>
+                    <span class="card-name">BIM</span>
+                </button>
+                <button class="formation-card" data-formation="maouss">
+                    <span class="card-icon">💻</span>
+                    <span class="card-name">MAOUSS</span>
+                </button>
+                <button class="formation-card" data-formation="boss">
+                    <span class="card-icon">👔</span>
+                    <span class="card-name">BOSS</span>
+                </button>
+                <button class="formation-card" data-formation="twist">
+                    <span class="card-icon">📚</span>
+                    <span class="card-name">TWIST</span>
+                </button>
+                <button class="formation-card" data-formation="lady">
+                    <span class="card-icon">👩‍💼</span>
+                    <span class="card-name">LADY</span>
+                </button>
+            </div>
+        </div>
     </div>
 
     <!-- MODAL POPUP -->
