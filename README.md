@@ -4,7 +4,7 @@ Prototype d'outil d'aide à la décision pour orienter vers les formations Repli
 
 ## 🌐 Démo en ligne
 
-👉 [Voir la démo](https://votre-username.github.io/repliks-demo)
+👉 [Voir la démo](https://olirobz31.github.io/repliks-demo/)
 
 ---
 
@@ -60,7 +60,7 @@ repliks-demo/
 ## 👨‍💻 Développeur
 
 **Olivier Pons** - Développeur Web Freelance  
-🌐 [DocSmart](https://docsmart.fr) | 📧 contact@olivier-pons-devweb.fr
+🌐 [DocSmart] | 📧 contact@olivier-pons-devweb.fr
 
 ---
 
