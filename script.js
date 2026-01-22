@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             modalCta.href = formation.url;
 
             // Afficher le modal
-            modal.style.display = 'block';
+            modal.style.display = 'flex';
             document.body.style.overflow = 'hidden'; // Empêcher le scroll
         }
     }
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Fermer avec la touche Echap
     document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && modal.style.display === 'block') {
+        if (event.key === 'Escape' && modal.style.display === 'flex') {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
         }

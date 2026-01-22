@@ -159,6 +159,9 @@ body {
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
     animation: fadeIn 0.3s ease;
+    /* Centrage vertical et horizontal (appliqué quand display: flex) */
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes fadeIn {
@@ -169,7 +172,6 @@ body {
 .modal-content {
     position: relative;
     background: white;
-    margin: 5% auto;
     padding: 40px;
     width: 90%;
     max-width: 600px;
@@ -213,7 +215,7 @@ body {
 }
 
 #modal-title {
-    font-size: 32px;
+    font-size: 36px;
     color: #333;
     margin-bottom: 10px;
     font-weight: 700;
@@ -225,7 +227,7 @@ body {
     color: white;
     padding: 8px 20px;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -233,7 +235,7 @@ body {
 }
 
 .modal-description {
-    font-size: 18px;
+    font-size: 20px;
     color: #666;
     line-height: 1.6;
     margin-bottom: 30px;
@@ -282,7 +284,6 @@ body {
     /* Modal adapté mobile */
     .modal-content {
         padding: 30px 20px;
-        margin: 10% auto;
         width: 95%;
     }
     
